@@ -10,15 +10,12 @@ Chatwork API client class library for .NET.
 _English documentation seems not to be maintained._
 
 ## Install
-
-Search for and install **Qamur.Chatwork** on **nuget.org**.
+Search for and install **Qamur.Chatwork** on **[nuget.org](https://www.nuget.org)**.
 
 ## Usage
-
 The example of handling requests and responses.
 
 ### Send a request
-
 The target endpoint: [GET] /my/tasks
 
 **Common part**

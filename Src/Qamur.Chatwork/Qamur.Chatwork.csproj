@@ -8,17 +8,19 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>Qamur.Chatwork.Client</PackageId>
-    <Version>0.0.1</Version>
+    <PackageId>Qamur.Chatwork</PackageId>
+    <Version>1.0.0</Version>
     <Authors>Kohei Oizumi</Authors>
     <Company>Kohei Oizumi</Company>
-    <Description>Chatwork API client class library for .Net.</Description>
+    <Title>Chatwork API client class library</Title>
+    <Description>Chatwork API client class library.</Description>
     <Copyright>2020 Kohei Oizumi</Copyright>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/amur568434/Qamur.Chatwork</PackageProjectUrl>
     <RepositoryUrl>https://github.com/amur568434/Qamur.Chatwork</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>First release.</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
