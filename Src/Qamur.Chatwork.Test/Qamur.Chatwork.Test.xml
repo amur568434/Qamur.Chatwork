@@ -1,0 +1,1082 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Qamur.Chatwork.Test</name>
+    </assembly>
+    <members>
+        <member name="T:Qamur.Chatwork.Test.ClientTestBase">
+            <summary>
+            ChatworkClient test base class.
+            </summary>
+        </member>
+        <member name="F:Qamur.Chatwork.Test.ClientTestBase.SkipWarningText">
+            <summary>
+            The text to warn about skipping.
+            </summary>
+        </member>
+        <member name="F:Qamur.Chatwork.Test.ClientTestBase.TestSettingsFilepath">
+            <summary>
+            The test settings file path.
+            </summary>
+        </member>
+        <member name="F:Qamur.Chatwork.Test.ClientTestBase.settings">
+            <summary>
+            Gets the test settings.
+            </summary>
+        </member>
+        <member name="F:Qamur.Chatwork.Test.ClientTestBase.client">
+            <summary>
+            The instance of <see cref="T:Qamur.Chatwork.ChatworkClient"/>.
+            </summary>
+        </member>
+        <member name="P:Qamur.Chatwork.Test.ClientTestBase.Client">
+            <summary>
+            Gets the instance of <see cref="T:Qamur.Chatwork.ChatworkClient"/>.
+            </summary>
+        </member>
+        <member name="P:Qamur.Chatwork.Test.ClientTestBase.Token">
+            <summary>
+            Gets the API token.
+            </summary>
+        </member>
+        <member name="P:Qamur.Chatwork.Test.ClientTestBase.Room">
+            <summary>
+            Gets the target chat room id.
+            </summary>
+        </member>
+        <member name="P:Qamur.Chatwork.Test.ClientTestBase.AccountId">
+            <summary>
+            Gets the owner's account id.
+            </summary>
+        </member>
+        <member name="P:Qamur.Chatwork.Test.ClientTestBase.RoomList">
+            <summary>
+            Gets the chat room ids.
+            </summary>
+        </member>
+        <member name="P:Qamur.Chatwork.Test.ClientTestBase.MemberList">
+            <summary>
+            Gets the chat room member account ids.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.ClientTestBase.Warn(System.String)">
+            <summary>
+            Notifies Warning.
+            </summary>
+            <param name="message">The warning message.</param>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.ClientTestBase.WarnSkip(System.String)">
+            <summary>
+            Warns about skipping.
+            </summary>
+            <param name="skipTarget">The skip target.</param>
+        </member>
+        <member name="T:Qamur.Chatwork.Test.Profile.TestMeGet">
+            <summary>
+            Test class.
+            </summary>
+            <remarks>
+            This test class runs the following path tests.
+            [GET] /me.
+            </remarks>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Profile.TestMeGet.TestGetMe">
+            <summary>
+            Tests [GET] /me.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Profile.TestMeGet.TestStaticGetMe">
+            <summary>
+            Tests [GET] /me.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Profile.TestMeGet.TestGetMeAsync">
+            <summary>
+            Tests [GET] /me asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Profile.TestMeGet.TestStaticGetMeAsync">
+            <summary>
+            Tests [GET] /me asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Profile.TestMeGet.TestGetMeAsyncCallback">
+            <summary>
+            Tests [GET] /me asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Profile.TestMeGet.TestStaticGetMeAsyncCallback">
+            <summary>
+            Tests [GET] /me asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Profile.TestMeGet.AssertGetMeResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.ProfileData},System.Int64,System.Int64)">
+            <summary>
+            Asserts "[GET] /me" response.
+            </summary>
+            <param name="response">The response data.</param>
+            <param name="roomId">The room id.</param>
+            <param name="accountId">The account id.</param>
+        </member>
+        <member name="T:Qamur.Chatwork.Test.Rooms.TestRoom">
+            <summary>
+            Test class.
+            </summary>
+            <remarks>
+            This test class runs the following path tests.
+            [POST] /rooms.
+            [GET] /rooms/{room_id}.
+            [PUT] /rooms/{room_id}.
+            [DELETE] /rooms/{room_id}.
+            </remarks>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoom.TestRoomLifecycle">
+            <summary>
+            Tests room.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoom.TestStaticRoomLifecycle">
+            <summary>
+            Tests room.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoom.TestRoomLifecycleAsync">
+            <summary>
+            Tests room asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoom.TestStaticRoomLifecycleAsync">
+            <summary>
+            Tests room asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoom.TestRoomLifecycleAsyncCallback">
+            <summary>
+            Tests room asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoom.TestStaticRoomLifecycleAsyncCallback">
+            <summary>
+            Tests room asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoom.AssertPostRoomsResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.TargetRoomData})">
+            <summary>
+            Asserts "[POST] /rooms" response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoom.AssertGetRoomResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.RoomData},System.Int64)">
+            <summary>
+            Asserts "[GET] /rooms/{room_id}" response.
+            </summary>
+            <param name="response">The response data.</param>
+            <param name="roomId">The chat room id.</param>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoom.AssertPutRoomResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.TargetRoomData},System.Int64)">
+            <summary>
+            Asserts "[PUT] /rooms/{room_id}" response.
+            </summary>
+            <param name="response">The response data.</param>
+            <param name="roomId">The room id.</param>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoom.AssertDeleteRoomResponse(Qamur.Chatwork.Data.ResponseData{System.Object})">
+            <summary>
+            Asserts "[DELETE] /rooms/{room_id}" response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="T:Qamur.Chatwork.Test.Rooms.TestRoomFile">
+            <summary>
+            Test class.
+            </summary>
+            <remarks>
+            This test class runs the following path tests.
+            [POST] /rooms/{room_id}/files.
+            [GET] /rooms/{room_id}/files/{file_id}.
+            </remarks>
+        </member>
+        <member name="F:Qamur.Chatwork.Test.Rooms.TestRoomFile.textFileContent">
+            <summary>
+            New file parameters.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomFile.TestRoomFileLifecycle">
+            <summary>
+            Tests file.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomFile.TestStaticRoomFileLifecycle">
+            <summary>
+            Tests file.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomFile.TestRoomFileLifecycleAsync">
+            <summary>
+            Tests file asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomFile.TestStaticRoomFileLifecycleAsync">
+            <summary>
+            Tests file asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomFile.TestRoomFileLifecycleAsyncCallback">
+            <summary>
+            Tests file asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomFile.TestStaticRoomFileLifecycleAsyncCallback">
+            <summary>
+            Tests file asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomFile.AssertPostFileResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.TargetFileData})">
+            <summary>
+            Asserts "[POST] /rooms/{room_id}/files" response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomFile.AssertGetFileResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.FileData},System.Int64)">
+            <summary>
+            Asserts "[GET] /rooms/{room_id}/files/{file_id}" response.
+            </summary>
+            <param name="response">The response data.</param>
+            <param name="fileId">The file id.</param>
+        </member>
+        <member name="T:Qamur.Chatwork.Test.Rooms.TestRoomFilesGet">
+            <summary>
+            Test class.
+            </summary>
+            <remarks>
+            This test class runs the following path tests.
+            [GET] /rooms/{room_id}/files.
+            </remarks>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomFilesGet.TestGetRoomFiles">
+            <summary>
+            Tests [GET] /rooms/{room_id}/files.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomFilesGet.TestStaticGetRoomFiles">
+            <summary>
+            Tests [GET] /rooms/{room_id}/files.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomFilesGet.TestGetRoomFilesAsync">
+            <summary>
+            Tests [GET] /rooms/{room_id}/files asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomFilesGet.TestStaticGetRoomFilesAsync">
+            <summary>
+            Tests [GET] /rooms/{room_id}/files asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomFilesGet.TestGetRoomFilesAsyncCallback">
+            <summary>
+            Tests [GET] /rooms/{room_id}/files asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomFilesGet.TestStaticGetRoomFilesAsyncCallback">
+            <summary>
+            Tests [GET] /rooms/{room_id}/files asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomFilesGet.AssertGetFilesResponse(Qamur.Chatwork.Data.ResponseData{System.Collections.Generic.IReadOnlyCollection{Qamur.Chatwork.Data.FileData}})">
+            <summary>
+            Asserts "[GET] /rooms/{room_id}/files" response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="T:Qamur.Chatwork.Test.Rooms.TestRoomLink">
+            <summary>
+            Test class.
+            </summary>
+            <remarks>
+            This test class runs the following path tests.
+            [GET] /rooms/{room_id}/link.
+            [POST] /rooms/{room_id}/link.
+            [PUT] /rooms/{room_id}/link.
+            [DELETE] /rooms/{room_id}/link.
+            </remarks>
+        </member>
+        <member name="F:Qamur.Chatwork.Test.Rooms.TestRoomLink.newLinkParameters">
+            <summary>
+            New link parameters.
+            </summary>
+        </member>
+        <member name="F:Qamur.Chatwork.Test.Rooms.TestRoomLink.updateLinkParameters">
+            <summary>
+            Updating link parameters.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomLink.TestRoomsRoomLink">
+            <summary>
+            Tests room link.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomLink.TestStaticRoomsRoomLink">
+            <summary>
+            Tests room link.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomLink.TestRoomsRoomLinkAsync">
+            <summary>
+            Tests room link asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomLink.TestStaticRoomsRoomLinkAsync">
+            <summary>
+            Tests room link asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomLink.TestRoomsRoomLinkAsyncCallback">
+            <summary>
+            Tests room link asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomLink.TestStaticRoomsRoomLinkAsyncCallback">
+            <summary>
+            Tests room link asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomLink.AssertGetRoomLinkResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.LinkData})">
+            <summary>
+            Asserts "[GET] /rooms/{room_id}/link." response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomLink.AssertPostRoomLinkResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.LinkData})">
+            <summary>
+            Asserts "[POST] /rooms/{room_id}/link." response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomLink.AssertPutRoomLinkResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.LinkData})">
+            <summary>
+            Asserts "[PUT] /rooms/{room_id}/link." response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomLink.AssertDeleteRoomLinkResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.LinkStatusData})">
+            <summary>
+            Asserts "[DELETE] /rooms/{room_id}/link." response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="T:Qamur.Chatwork.Test.Rooms.TestRoomMembersGet">
+            <summary>
+            Test class.
+            </summary>
+            <remarks>
+            This test class runs the following path tests.
+            [GET] /rooms/{room_id}/members.
+            </remarks>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMembersGet.TestGetRoomMembers">
+            <summary>
+            Tests [GET] /rooms/{room_id}/members.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMembersGet.TestStaticGetRoomMembers">
+            <summary>
+            Tests [GET] /rooms/{room_id}/members.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMembersGet.TestGetRoomMembersAsync">
+            <summary>
+            Tests [GET] /rooms/{room_id}/members asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMembersGet.TestStaticGetRoomMembersAsync">
+            <summary>
+            Tests [GET] /rooms/{room_id}/members asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMembersGet.TestGetRoomMembersAsyncCallback">
+            <summary>
+            Tests [GET] /rooms/{room_id}/members asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMembersGet.TestStaticGetRoomMembersAsyncCallback">
+            <summary>
+            Tests [GET] /rooms/{room_id}/members asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMembersGet.AssertGetRoomMembersResponse(Qamur.Chatwork.Data.ResponseData{System.Collections.Generic.IReadOnlyCollection{Qamur.Chatwork.Data.MemberData}},System.Int64)">
+            <summary>
+            Asserts "[GET] /rooms/{room_id}/members" response.
+            </summary>
+            <param name="response">The response data.</param>
+            <param name="accountId">The member account id.</param>
+        </member>
+        <member name="T:Qamur.Chatwork.Test.Rooms.TestRoomMembersPut">
+            <summary>
+            Test class.
+            </summary>
+            <remarks>
+            This test class runs the following path tests.
+            [PUT] /rooms/{room_id}/members.
+            </remarks>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMembersPut.TestPutRoomMembers">
+            <summary>
+            Tests [PUT] /rooms/{room_id}/members.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMembersPut.TestStaticPutRoomMembers">
+            <summary>
+            Tests [PUT] /rooms/{room_id}/members.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMembersPut.TestPutRoomMembersAsync">
+            <summary>
+            Tests [PUT] /rooms/{room_id}/members asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMembersPut.TestStaticPutRoomMembersAsync">
+            <summary>
+            Tests [PUT] /rooms/{room_id}/members asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMembersPut.TestPutRoomMembersAsyncCallback">
+            <summary>
+            Tests [PUT] /rooms/{room_id}/members asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMembersPut.TestStaticPutRoomMembersAsyncCallback">
+            <summary>
+            Tests [PUT] /rooms/{room_id}/members asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMembersPut.AssertPutRoomMembersResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.MembersSummaryData},System.Int64)">
+            <summary>
+            Asserts "[PUT] /rooms/{room_id}/members" response.
+            </summary>
+            <param name="response">The response data.</param>
+            <param name="accountId">The member account id.</param>
+        </member>
+        <member name="T:Qamur.Chatwork.Test.Rooms.TestRoomMessage">
+            <summary>
+            Test class.
+            </summary>
+            <remarks>
+            This test class runs the following path tests.
+            [POST] /rooms/{room_id}/messages.
+            [GET] /rooms/{room_id}/messages/{message_id}.
+            [PUT] /rooms/{room_id}/messages/{message_id}.
+            [DELETE] /rooms/{room_id}/messages/{message_id}.
+            </remarks>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessage.TestMessageLifecycle">
+            <summary>
+            Tests message.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessage.TestStaticMessageLifecycle">
+            <summary>
+            Tests message.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessage.TestMessageLifecycleAsync">
+            <summary>
+            Tests message asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessage.TestStaticMessageLifecycleAsync">
+            <summary>
+            Tests message asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessage.TestMessageLifecycleAsyncCallback">
+            <summary>
+            Tests message asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessage.TestStaticMessageLifecycleAsyncCallback">
+            <summary>
+            Tests message asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessage.AssertPostRoomMessageResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.TargetMessageData})">
+            <summary>
+            Asserts "[POST] /rooms/{room_id}/messages" response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessage.AssertGetRoomMessageResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.MessageData},System.String)">
+            <summary>
+            Asserts "[GET] /rooms/{room_id}/messages/{message_id}" response.
+            </summary>
+            <param name="response">The response data.</param>
+            <param name="messageId">The messasge id.</param>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessage.AssertPutRoomMessageResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.TargetMessageData},System.String)">
+            <summary>
+            Asserts "[PUT] /rooms/{room_id}/messages/{message_id}" response.
+            </summary>
+            <param name="response">The response data.</param>
+            <param name="messageId">The messasge id.</param>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessage.AssertDeleteRoomMessageResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.TargetMessageData},System.String)">
+            <summary>
+            Asserts "[DELETE] /rooms/{room_id}/messages/{message_id}" response.
+            </summary>
+            <param name="response">The response data.</param>
+            <param name="messageId">The messaage id.</param>
+        </member>
+        <member name="T:Qamur.Chatwork.Test.Rooms.TestRoomMessagesGet">
+            <summary>
+            Test class.
+            </summary>
+            <remarks>
+            This test class runs the following path tests.
+            [GET] /rooms/{room_id}/messages.
+            </remarks>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesGet.TestGetRoomMessages">
+            <summary>
+            Tests [GET] /rooms/{room_id}/messages.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesGet.TestStaticGetRoomMembers">
+            <summary>
+            Tests [GET] /rooms/{room_id}/messages.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesGet.TestGetRoomMessagesAsync">
+            <summary>
+            Tests [GET] /rooms/{room_id}/messages asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesGet.TestStaticGetRoomMessagesAsync">
+            <summary>
+            Tests [GET] /rooms/{room_id}/messages asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesGet.TestGetRoomMessagesAsyncCallback">
+            <summary>
+            Tests [GET] /rooms/{room_id}/messages asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesGet.TestStaticGetRoomMessagesAsyncCallback">
+            <summary>
+            Tests [GET] /rooms/{room_id}/messages asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesGet.AssertGetRoomMessagesResponse(Qamur.Chatwork.Data.ResponseData{System.Collections.Generic.IReadOnlyCollection{Qamur.Chatwork.Data.MessageData}})">
+            <summary>
+            Asserts "[GET] /rooms/{room_id}/messages" response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="T:Qamur.Chatwork.Test.Rooms.TestRoomMessagesReadPut">
+            <summary>
+            Test class.
+            </summary>
+            <remarks>
+            This test class runs the following path tests.
+            [PUT] /rooms/{room_id}/messages/read.
+            </remarks>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesReadPut.TestPutRoomMessagesRead">
+            <summary>
+            Tests [PUT] /rooms/{room_id}/messages/read.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesReadPut.TestStaticPutRoomMessagesRead">
+            <summary>
+            Tests [PUT] /rooms/{room_id}/messages/read.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesReadPut.TestPutRoomMessagesReadAsync">
+            <summary>
+            Tests [PUT] /rooms/{room_id}/messages/read.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesReadPut.TestStaticPutRoomMessagesReadAsync">
+            <summary>
+            Tests [PUT] /rooms/{room_id}/messages/read.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesReadPut.TestPutRoomMessagesReadAsyncCallback">
+            <summary>
+            Tests [PUT] /rooms/{room_id}/messages/read.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesReadPut.TestStaticPutRoomMessagesReadAsyncCallback">
+            <summary>
+            Tests [PUT] /rooms/{room_id}/messages/read.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesReadPut.AssertGetRoomMessagesResponse(Qamur.Chatwork.Data.ResponseData{System.Collections.Generic.IReadOnlyCollection{Qamur.Chatwork.Data.MessageData}})">
+            <summary>
+            Asserts "[GET] /rooms/{room_id}/messages" response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesReadPut.AssertPutRoomMessagesReadResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.MessagesUnreadSummaryData})">
+            <summary>
+            Asserts "[PUT] /rooms/{room_id}/messages/read" response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="T:Qamur.Chatwork.Test.Rooms.TestRoomMessagesUnreadPut">
+            <summary>
+            Test class.
+            </summary>
+            <remarks>
+            This test class runs the following path tests.
+            [PUT] /rooms/{room_id}/messages/unread.
+            </remarks>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesUnreadPut.TestPutRoomMessagesUnread">
+            <summary>
+            Tests [PUT] /rooms/{room_id}/messages/unread.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesUnreadPut.TestStaticPutRoomMessagesUnread">
+            <summary>
+            Tests [PUT] /rooms/{room_id}/messages/unread.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesUnreadPut.TestPutRoomMessagesUnreadAsync">
+            <summary>
+            Tests [PUT] /rooms/{room_id}/messages/read.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesUnreadPut.TestStaticPutRoomMessagesUnreadAsync">
+            <summary>
+            Tests [PUT] /rooms/{room_id}/messages/read.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesUnreadPut.TestPutRoomMessagesUnreadAsyncCallback">
+            <summary>
+            Tests [PUT] /rooms/{room_id}/messages/read.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesUnreadPut.TestStaticPutRoomMessagesUnreadAsyncCallback">
+            <summary>
+            Tests [PUT] /rooms/{room_id}/messages/read.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesUnreadPut.AssertGetRoomMessagesResponse(Qamur.Chatwork.Data.ResponseData{System.Collections.Generic.IReadOnlyCollection{Qamur.Chatwork.Data.MessageData}})">
+            <summary>
+            Asserts "[GET] /rooms/{room_id}/messages" response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomMessagesUnreadPut.AssertPutRoomMessagesUnreadResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.MessagesUnreadSummaryData})">
+            <summary>
+            Asserts "[PUT] /rooms/{room_id}/messages/unread" response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="T:Qamur.Chatwork.Test.Rooms.TestRoomsGet">
+            <summary>
+            Test class.
+            </summary>
+            <remarks>
+            This test class runs the following path tests.
+            [GET] /rooms.
+            </remarks>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomsGet.TestGetRooms">
+            <summary>
+            Tests [GET] /rooms.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomsGet.TestStaticGetRooms">
+            <summary>
+            Tests [GET] /rooms.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomsGet.TestGetRoomsAsync">
+            <summary>
+            Tests [GET] /rooms asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomsGet.TestStaticGetRoomsAsync">
+            <summary>
+            Tests [GET] /rooms asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomsGet.TestGetRoomsAsyncCallback">
+            <summary>
+            Tests [GET] /rooms asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomsGet.TestStaticGetRoomsAsyncCallback">
+            <summary>
+            Tests [GET] /rooms asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomsGet.AssertGetRoomsResponse(Qamur.Chatwork.Data.ResponseData{System.Collections.Generic.IReadOnlyCollection{Qamur.Chatwork.Data.RoomData}})">
+            <summary>
+            Asserts "[GET] /rooms" response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="T:Qamur.Chatwork.Test.Rooms.TestRoomTasks">
+            <summary>
+            Test class.
+            </summary>
+            <remarks>
+            This test class runs the following path tests.
+            [GET] /rooms/{room_id}/tasks.
+            [POST] /rooms/{room_id}/tasks.
+            [GET] /rooms/{room_id}/tasks/{task_id}.
+            [PUT] /rooms/{room_id}/tasks/{task_id}/status.
+            </remarks>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomTasks.TestRoomTaskLifecycle">
+            <summary>
+            Tests room task.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomTasks.TestStaticRoomTaskLifecycle">
+            <summary>
+            Tests room task.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomTasks.TestRoomTaskLifecycleAsync">
+            <summary>
+            Tests room task asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomTasks.TestStaticRoomTaskLifecycleAsync">
+            <summary>
+            Tests room task asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomTasks.TestRoomTaskLifecycleAsyncCallback">
+            <summary>
+            Tests room task asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomTasks.TestStaticRoomTaskLifecycleAsyncCallback">
+            <summary>
+            Tests room task asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomTasks.AssertGetRoomTasksResponse(Qamur.Chatwork.Data.ResponseData{System.Collections.Generic.IReadOnlyCollection{Qamur.Chatwork.Data.RoomTaskData}})">
+            <summary>
+            Asserts "[GET] /rooms/{room_id}/tasks" response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomTasks.AssertPostRoomTasksResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.TargetRoomTasksData})">
+            <summary>
+            Asserts "[POST] /rooms/{room_id}/tasks" response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomTasks.AssertGetRoomTaskResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.RoomTaskData},System.Int64)">
+            <summary>
+            Asserts "[GET] /rooms/{room_id}/tasks/{task_id}" response.
+            </summary>
+            <param name="response">The response data.</param>
+            <param name="taskId">The task id.</param>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Rooms.TestRoomTasks.AssertPutRoomTaskStatusResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.TargetRoomTaskData},System.Int64)">
+            <summary>
+            Asserts "[PUT] /rooms/{room_id}/tasks/{task_id}/status" response.
+            </summary>
+            <param name="response">The response data.</param>
+            <param name="taskId">The task id.</param>
+        </member>
+        <member name="T:Qamur.Chatwork.Test.Settings.ChatworkTestSettings">
+            <summary>
+            The chatwork client test settings.
+            </summary>
+        </member>
+        <member name="P:Qamur.Chatwork.Test.Settings.ChatworkTestSettings.Token">
+            <summary>
+            Gets the API token.
+            </summary>
+        </member>
+        <member name="P:Qamur.Chatwork.Test.Settings.ChatworkTestSettings.Room">
+            <summary>
+            Gets the owner's chat room id.
+            </summary>
+        </member>
+        <member name="P:Qamur.Chatwork.Test.Settings.ChatworkTestSettings.AccountId">
+            <summary>
+            Gets the owner's account id.
+            </summary>
+        </member>
+        <member name="P:Qamur.Chatwork.Test.Settings.ChatworkTestSettings.RoomList">
+            <summary>
+            Gets the chat room ids.
+            </summary>
+        </member>
+        <member name="P:Qamur.Chatwork.Test.Settings.ChatworkTestSettings.MemberList">
+            <summary>
+            Gets the chat room member account ids.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Test.Settings.ChatworkTestSettings.CreateFromJson(System.String)">
+            <summary>
+            Creates settings object from json file.
+            </summary>
+            <param name="filepath">The json file path.</param>
+            <returns>The settings.</returns>
+        </member>
+        <member name="T:Qamur.Chatwork.Test.Settings.IChatworkTestSettings">
+            <summary>
+            The interface of chatwork client test settings.
+            </summary>
+        </member>
+        <member name="P:Qamur.Chatwork.Test.Settings.IChatworkTestSettings.Token">
+            <summary>
+            Gets the API token.
+            </summary>
+        </member>
+        <member name="P:Qamur.Chatwork.Test.Settings.IChatworkTestSettings.Room">
+            <summary>
+            Gets the owner's chat room id.
+            </summary>
+        </member>
+        <member name="P:Qamur.Chatwork.Test.Settings.IChatworkTestSettings.AccountId">
+            <summary>
+            Gets the owner's account id.
+            </summary>
+        </member>
+        <member name="P:Qamur.Chatwork.Test.Settings.IChatworkTestSettings.RoomList">
+            <summary>
+            Gets the chat room ids.
+            </summary>
+        </member>
+        <member name="P:Qamur.Chatwork.Test.Settings.IChatworkTestSettings.MemberList">
+            <summary>
+            Gets the chat room member account ids.
+            </summary>
+        </member>
+        <member name="T:Qamur.Chatwork.Test.SkipText">
+            <summary>
+            The skip reasons.
+            Sets null to run the test.
+            </summary>
+        </member>
+        <member name="F:Qamur.Chatwork.Test.SkipText.SkipNull">
+            <summary>
+            The xUnit skip parameter.
+            </summary>
+        </member>
+        <member name="F:Qamur.Chatwork.Test.SkipText.SkipDefault">
+            <summary>
+            The xUnit skip parameter.
+            </summary>
+        </member>
+        <member name="F:Qamur.Chatwork.Test.SkipText.SkipNotReady">
+            <summary>
+            The xUnit skip parameter.
+            </summary>
+        </member>
+        <member name="F:Qamur.Chatwork.Test.SkipText.SkipAlreadyPassed">
+            <summary>
+            The xUnit skip parameter.
+            </summary>
+        </member>
+        <member name="F:Qamur.Chatwork.Test.SkipText.SkipParameterCheck">
+            <summary>
+            The xUnit skip parameter.
+            </summary>
+        </member>
+        <member name="T:Qamur.Chatwork.Client.Test.Contacts.TestContactsGet">
+            <summary>
+            Test class.
+            </summary>
+            <remarks>
+            This test class runs the following path tests.
+            [GET] /contacts.
+            </remarks>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.Contacts.TestContactsGet.TestGetContacts">
+            <summary>
+            Tests [GET] /contacts.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.Contacts.TestContactsGet.TestStaticGetContacts">
+            <summary>
+            Tests [GET] /contacts.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.Contacts.TestContactsGet.TestGetContactsAsync">
+            <summary>
+            Tests [GET] /contacts asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.Contacts.TestContactsGet.TestStaticGetContactsAsync">
+            <summary>
+            Tests [GET] /contacts asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.Contacts.TestContactsGet.TestGetContactsAsyncCallback">
+            <summary>
+            Tests [GET] /contacts asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.Contacts.TestContactsGet.TestStaticGetContactsAsyncCallback">
+            <summary>
+            Tests [GET] /contacts asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.Contacts.TestContactsGet.AssertGetContactsResponse(Qamur.Chatwork.Data.ResponseData{System.Collections.Generic.IReadOnlyCollection{Qamur.Chatwork.Data.ContactData}})">
+            <summary>
+            Asserts "[GET] /contacts" response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="T:Qamur.Chatwork.Client.Test.IncomingRequests.TestIncomingRequests">
+            <summary>
+            Test class.
+            </summary>
+            <remarks>
+            This test class runs the following path tests.
+            [GET] /incoming_requests.
+            [PUT] /incoming_requests/{request_id}.
+            [DELETE] /incoming_requests/{request_id}.
+            </remarks>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.IncomingRequests.TestIncomingRequests.TestIncomingRequestsGetPutDelete">
+            <summary>
+            Tests incoming_requests.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.IncomingRequests.TestIncomingRequests.TestStaticIncomingRequestsGetPutDelete">
+            <summary>
+            Tests incoming_requests.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.IncomingRequests.TestIncomingRequests.TestIncomingRequestsGetPutDeleteAsync">
+            <summary>
+            Tests incoming_requests asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.IncomingRequests.TestIncomingRequests.TestStaticIncomingRequestsGetPutDeleteAsync">
+            <summary>
+            Tests incoming_requests asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.IncomingRequests.TestIncomingRequests.TestIncomingRequestsGetPutDeleteAsyncCallback">
+            <summary>
+            Tests incoming_requests asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.IncomingRequests.TestIncomingRequests.TestStaticIncomingRequestsGetPutDeleteAsyncCallback">
+            <summary>
+            Tests incoming_requests asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.IncomingRequests.TestIncomingRequests.AssertGetIncomingRequestsResponse(Qamur.Chatwork.Data.ResponseData{System.Collections.Generic.IReadOnlyCollection{Qamur.Chatwork.Data.IncomingRequestData}})">
+            <summary>
+            Asserts "[GET] /incoming_requests" response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.IncomingRequests.TestIncomingRequests.AssertPutIncomingRequestResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.ContactData})">
+            <summary>
+            Asserts "[PUT] /incoming_requests/{request_id}" response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.IncomingRequests.TestIncomingRequests.AssertDeleteIncomingRequestResponse(Qamur.Chatwork.Data.ResponseData{System.Object})">
+            <summary>
+            Asserts "[DELETE] /incoming_requests/{request_id}" response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="T:Qamur.Chatwork.Client.Test.My.TestMyStatusGet">
+            <summary>
+            Test class.
+            </summary>
+            <remarks>
+            This test class runs the following path tests.
+            [GET] /my/status.
+            </remarks>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.My.TestMyStatusGet.TestGetMyStatus">
+            <summary>
+            Tests [GET] /my/status.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.My.TestMyStatusGet.TestStaticGetMyStatus">
+            <summary>
+            Tests [GET] /my/status.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.My.TestMyStatusGet.TestGetMyStatusAsync">
+            <summary>
+            Tests [GET] /my/status asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.My.TestMyStatusGet.TestStaticGetMyStatusAsync">
+            <summary>
+            Tests [GET] /my/status asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.My.TestMyStatusGet.TestGetMyStatusAsyncCallback">
+            <summary>
+            Tests [GET] /my/status asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.My.TestMyStatusGet.TestStaticGetMyStatusAsyncCallback">
+            <summary>
+            Tests [GET] /my/status asynchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.My.TestMyStatusGet.AssertGetMyStatusResponse(Qamur.Chatwork.Data.ResponseData{Qamur.Chatwork.Data.MyStatusData})">
+            <summary>
+            Asserts "[GET] /my/status" response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+        <member name="T:Qamur.Chatwork.Client.Test.My.TestMyTasksGet">
+            <summary>
+            Test class.
+            </summary>
+            <remarks>
+            This test class runs the following path tests.
+            [GET] /my/tasks.
+            </remarks>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.My.TestMyTasksGet.TestGetMyTasks">
+            <summary>
+            Tests [GET] /my/tasks.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.My.TestMyTasksGet.TestStaticGetMyTasks">
+            <summary>
+            Tests [GET] /my/tasks.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.My.TestMyTasksGet.TestGetMyTasksAsync">
+            <summary>
+            Tests [GET] /my/tasks asyncchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.My.TestMyTasksGet.TestStaticGetMyTasksAsync">
+            <summary>
+            Tests [GET] /my/tasks asyncchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.My.TestMyTasksGet.TestGetMyTasksAsyncCallback">
+            <summary>
+            Tests [GET] /my/tasks asyncchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.My.TestMyTasksGet.TestStaticGetMyTasksAsyncCallback">
+            <summary>
+            Tests [GET] /my/tasks asyncchronously.
+            </summary>
+        </member>
+        <member name="M:Qamur.Chatwork.Client.Test.My.TestMyTasksGet.AssertGetMyTasksResponse(Qamur.Chatwork.Data.ResponseData{System.Collections.Generic.IReadOnlyCollection{Qamur.Chatwork.Data.MyTaskData}})">
+            <summary>
+            Asserts "[GET] /my/tasks" response.
+            </summary>
+            <param name="response">The response data.</param>
+        </member>
+    </members>
+</doc>
