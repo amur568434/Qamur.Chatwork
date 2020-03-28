@@ -129,7 +129,7 @@ if (!response.Success)
     {
         // No error messages.
     }
-    else of (response.Data.Any())
+    else if (response.Data.Any())
     {
         // Some error messages.
     }
