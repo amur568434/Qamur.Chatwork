@@ -1,4 +1,4 @@
-﻿// <copyright file="IconPresetValue.cs" company="Kohei Oizumi">
+// <copyright file="IconPresetValue.cs" company="Kohei Oizumi">
 // Copyright 2020 Kohei Oizumi
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -94,5 +94,35 @@ namespace Qamur.Chatwork.ObjectValues
         /// </summary>
         [StringValue("heart")]
         Heart = 12,
+
+        /// <summary>
+        /// magcup.
+        /// </summary>
+        [StringValue("magcup")]
+        Magcup = 13,
+
+        /// <summary>
+        /// beer.
+        /// </summary>
+        [StringValue("beer")]
+        Beer = 14,
+
+        /// <summary>
+        /// music.
+        /// </summary>
+        [StringValue("music")]
+        Music = 15,
+
+        /// <summary>
+        /// sports.
+        /// </summary>
+        [StringValue("sports")]
+        Sports = 16,
+
+        /// <summary>
+        /// travel.
+        /// </summary>
+        [StringValue("travel")]
+        Travel = 17,
     }
 }

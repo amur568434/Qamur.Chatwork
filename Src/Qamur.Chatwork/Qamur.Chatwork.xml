@@ -3598,6 +3598,31 @@
             heart.
             </summary>
         </member>
+        <member name="F:Qamur.Chatwork.ObjectValues.IconPresetValue.Magcup">
+            <summary>
+            magcup.
+            </summary>
+        </member>
+        <member name="F:Qamur.Chatwork.ObjectValues.IconPresetValue.Beer">
+            <summary>
+            beer.
+            </summary>
+        </member>
+        <member name="F:Qamur.Chatwork.ObjectValues.IconPresetValue.Music">
+            <summary>
+            music.
+            </summary>
+        </member>
+        <member name="F:Qamur.Chatwork.ObjectValues.IconPresetValue.Sports">
+            <summary>
+            sports.
+            </summary>
+        </member>
+        <member name="F:Qamur.Chatwork.ObjectValues.IconPresetValue.Travel">
+            <summary>
+            travel.
+            </summary>
+        </member>
         <member name="T:Qamur.Chatwork.ObjectValues.LimitTypeValue">
             <summary>
             The values of task limit type.
