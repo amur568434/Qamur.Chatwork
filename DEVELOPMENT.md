@@ -17,7 +17,7 @@ Select and execute one of the following.
 
 ## How to tun tests.
 
-Put and edit **test_setting.json** file in **Src/Qamur.Chatwork.Test**.
+Put and edit **test_settings.json** file in **Src/Qamur.Chatwork.Test**.
 
 ```
 {
