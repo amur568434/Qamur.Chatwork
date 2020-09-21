@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -9,7 +9,7 @@
 
   <PropertyGroup>
     <PackageId>Qamur.Chatwork</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>Kohei Oizumi</Authors>
     <Company>Kohei Oizumi</Company>
     <Title>Chatwork API client class library</Title>
@@ -20,7 +20,11 @@
     <PackageProjectUrl>https://github.com/amur568434/Qamur.Chatwork</PackageProjectUrl>
     <RepositoryUrl>https://github.com/amur568434/Qamur.Chatwork</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>First release.</PackageReleaseNotes>
+    <PackageReleaseNotes>Fix some request sending parameters to allow null values.
+Add icon preset values.</PackageReleaseNotes>
+    <PackageTags>Chatwork</PackageTags>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -33,7 +37,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
