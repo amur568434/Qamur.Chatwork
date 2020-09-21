@@ -17,7 +17,6 @@
 namespace Qamur.Chatwork.Test.Settings
 {
     using System.Collections.Generic;
-    using Newtonsoft.Json;
 
     /// <summary>
     /// The interface of chatwork client test settings.
