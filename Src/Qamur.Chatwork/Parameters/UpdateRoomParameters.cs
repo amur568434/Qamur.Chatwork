@@ -1,4 +1,4 @@
-﻿// <copyright file="UpdateRoomParameters.cs" company="Kohei Oizumi">
+// <copyright file="UpdateRoomParameters.cs" company="Kohei Oizumi">
 // Copyright 2020 Kohei Oizumi
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,7 +35,7 @@ namespace Qamur.Chatwork.Parameters
         /// <see cref="IconPresetValue"/>.
         /// </summary>
         [JsonProperty("icon_preset")]
-        public IconPresetValue IconPreset { get; set; }
+        public IconPresetValue? IconPreset { get; set; }
 
         /// <summary>
         /// Gets or sets the chat room name.

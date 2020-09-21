@@ -1,4 +1,4 @@
-﻿// <copyright file="UpdateLinkParameters.cs" company="Kohei Oizumi">
+// <copyright file="UpdateLinkParameters.cs" company="Kohei Oizumi">
 // Copyright 2020 Kohei Oizumi
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -39,6 +39,6 @@ namespace Qamur.Chatwork.Parameters
         /// Gets or sets a value indicating whether the administrator determines the need for acceptance.
         /// </summary>
         [JsonProperty("need_acceptance")]
-        public bool NeedAcceptance { get; set; }
+        public bool? NeedAcceptance { get; set; }
     }
 }

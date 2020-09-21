@@ -45,7 +45,7 @@ namespace Qamur.Chatwork.Parameters
         /// <see cref="LimitTypeValue"/>.
         /// </summary>
         [JsonProperty("limit_type")]
-        public LimitTypeValue LimitType { get; set; }
+        public LimitTypeValue? LimitType { get; set; }
 
         /// <summary>
         /// Gets or sets the assignees.

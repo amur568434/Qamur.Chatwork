@@ -28,18 +28,18 @@ namespace Qamur.Chatwork.Parameters
         /// Gets or sets the assignee's account id.
         /// </summary>
         [JsonProperty("account_id")]
-        public long AccountId { get; set; }
+        public long? AccountId { get; set; }
 
         /// <summary>
         /// Gets or sets the assigner's account id.
         /// </summary>
         [JsonProperty("assigned_by_account_id")]
-        public long AssignedByAccontId { get; set; }
+        public long? AssignedByAccontId { get; set; }
 
         /// <summary>
         /// Gets or sets the task status.
         /// </summary>
         [JsonProperty("status")]
-        public TaskStatusValue Status { get; set; }
+        public TaskStatusValue? Status { get; set; }
     }
 }
